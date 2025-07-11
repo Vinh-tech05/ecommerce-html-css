@@ -108,9 +108,13 @@ button {
   display: flex;
   align-items: center;
   background-color: var(--color-secondary);
-  border-radius: 8px;
+  border-radius: 999px;
   overflow: hidden;
   width: 100%;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
 }
 
 .input-group .icon {
