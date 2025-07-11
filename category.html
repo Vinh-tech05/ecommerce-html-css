@@ -1,32 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<!-- reset css -->
-		<link rel="stylesheet" href="./assets/styles/reset.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="./assets/styles/reset.css" />
 
-		<!-- bootstrap -->
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-			crossorigin="anonymous"
-		/>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
 
-		<!-- common css -->
-		<link rel="stylesheet" href="./assets/styles/common.css" />
+    <!-- common css -->
+    <link rel="stylesheet" href="./assets/styles/common.css" />
 
-		<!-- main css -->
-		<link rel="stylesheet" href="./assets/styles/main.css" />
-	</head>
-	<body>
-		<!-- bootstrap -->
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-			crossorigin="anonymous"
-		></script>
-	</body>
+    <!-- main css -->
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+  </head>
+  <body>
+    <!-- Top Banner -->
+    <div class="top-banner bg-dark text-white text-center py-2">
+      <div class="container">
+        <span class="small"
+          >Sign up and get 20% off to your first order.
+          <a href="#" class="text-white text-decoration-underline"
+            >Sign Up Now</a
+          ></span
+        >
+        <button
+          type="button"
+          class="btn-close btn-close-white float-end"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold fs-2" href="index.html">SHOP.CO</a>
+
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="category.html"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Shop
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="category.html">Men</a></li>
+                <li><a class="dropdown-item" href="category.html">Women</a></li>
+                <li><a class="dropdown-item" href="category.html">Kids</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">On Sale</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Brands</a>
+            </li>
+          </ul>
+          <!-- Search bar -->
+          <div class="d-flex" id="searchBar">
+            <div class="search-container me-3 d-none d-lg-block">
+              <div class="input-group">
+                <span
+                  class="input-group-text bg-light border-0"
+                  style="border-radius: 62px"
+                >
+                  <i class="bi bi-search text-muted"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control border-0 bg-light"
+                  placeholder="Search for products..."
+                />
+              </div>
+            </div>
+
+            <!-- Icons -->
+            <div class="d-flex align-items-center gap-3">
+              <button class="btn btn-primary-link p-0 d-lg-none">
+                <i class="bi bi-search fs-5"></i>
+              </button>
+              <a href="cart.html" class="btn btn-primary-link p-0">
+                <i class="bi bi-cart fs-5"></i>
+              </a>
+              <button class="btn btn-primary-link p-0">
+                <i class="bi bi-person fs-5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-4">
+      <hr />
+      <br />
+      <div class="row">
+        <p>
+          Home
+          <span class="fw-bold"
+            ><img src="assets/icons/mui-ten-phai.svg" alt="" />Casual</span
+          >
+        </p>
+        <!-- Sidebar Filters -->
+        <div class="col-lg-3">
+          <div class="filter-section">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5>Filters</h5>
+              <img src="assets/icons/Frame.svg" alt="" />
+            </div>
+            <hr />
+            <ul class="list-unstyled">
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                T-shirts
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                Shorts
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                Shirts
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                Hoodie
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                Jeans
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+            </ul>
+            <hr />
+            <p
+              class="titleFilter d-flex justify-content-between align-items-center mb-3"
+            >
+              Price
+              <img src="assets/icons/mui-ten-len.svg" alt="" />
+            </p>
+            <input
+              type="range"
+              id="min"
+              min="0"
+              max="100"
+              value="20"
+              step="1"
+              style="position: absolute; width: 247px"
+            />
+            <input
+              type="range"
+              id="max"
+              min="0"
+              max="100"
+              value="80"
+              step="1"
+              style="position: absolute; width: 247px"
+            />
+            <br />
+            <p>
+              Giá từ: <span id="min-val">20</span> đến
+              <span id="max-val">80</span>
+            </p>
+            <p
+              class="titleFilter d-flex justify-content-between align-items-center mb-3"
+            >
+              Colors
+              <img src="assets/icons/mui-ten-len.svg" alt="" />
+            </p>
+            <div class="d-flex flex-wrap gap-35" id="colorFilter">
+              <div class="color-cirle" style="background-color: #00c12b"></div>
+              <div class="color-cirle" style="background-color: #f50606"></div>
+              <div class="color-cirle" style="background-color: #f5dd06"></div>
+              <div class="color-cirle" style="background-color: #f57906"></div>
+              <div class="color-cirle" style="background-color: #06caf5"></div>
+              <div class="color-cirle" style="background-color: #063af5"></div>
+              <div class="color-cirle" style="background-color: #7d06f5"></div>
+              <div class="color-cirle" style="background-color: #f506a4"></div>
+              <div class="color-cirle" style="background-color: #ffff"></div>
+              <div class="color-cirle" style="background-color: black"></div>
+            </div>
+            <hr />
+            <p
+              class="titleFilter d-flex justify-content-between align-items-center mb-3"
+            >
+              Size
+              <img src="assets/icons/mui-ten-len.svg" alt="" />
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <div class="sizeFilter">XX-Small</div>
+              <div class="sizeFilter">X-Small</div>
+              <div class="sizeFilter">Small</div>
+              <div class="sizeFilter">Medium</div>
+              <div class="sizeFilter">Large</div>
+              <div class="sizeFilter">X-Large</div>
+              <div class="sizeFilter">XX-Large</div>
+              <div class="sizeFilter">3X-Large</div>
+              <div class="sizeFilter">4X-Large</div>
+            </div>
+            <hr />
+            <p
+              class="titleFilter d-flex justify-content-between align-items-center mb-3"
+            >
+              Dress Style
+              <img src="assets/icons/mui-ten-len.svg" alt="" />
+            </p>
+            <ul class="list-unstyled">
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                Casual
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                Formal
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                Party
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                Gym
+                <img src="assets/icons/mui-ten-phai.svg" alt="" />
+              </li>
+            </ul>
+            <button class="btn btn-dark w-100 mt-3">Apply Filter</button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="col-lg-9">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3>Casual</h3>
+            <span>Showing 1-10 of 100 Products</span>
+          </div>
+
+          <div class="row g-3">
+            <!-- Example Product Card -->
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐<span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">$145</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐ <span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">$180</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐<span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">
+                  $120
+                  <del>$150</del>
+                  <span class="badge bg-danger ms-2">-30%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐<span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">
+                  $240
+                  <del>$260</del>
+                  <span class="badge bg-danger ms-2">-20%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐<span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">$180</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐<span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">
+                  $130
+                  <del>160</del>
+                  <span class="badge bg-danger ms-2">-30%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐<span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">
+                  $212
+                  <del>232</del>
+                  <span class="badge bg-danger ms-2">-20%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐<span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">$145</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4">
+              <div class="product-box p-3">
+                <div class="product-image-wrapper mb-3">
+                  <img
+                    src="assets/imgs/GSF2.webp"
+                    class="img-fluid"
+                    alt="Gradient Graphic T-shirt"
+                  />
+                </div>
+                <h6 class="fw-semibold">Gradient Graphic T-shirt</h6>
+                <div class="rating small text-muted mb-1">
+                  ⭐⭐⭐<span>3.5/5</span>
+                </div>
+                <div class="price fw-bold">$80</div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <!-- Pagination -->
+          <nav class="mt-4">
+            <div class="custom-pagination">
+              <!-- Previous -->
+              <div class="page-controls">
+                <a class="page-link" href="#"><span>&larr;</span> Previous</a>
+              </div>
+              <ul class="pagination page-numbers mb-0">
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item disabled">
+                  <a class="page-link" href="#">...</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item"><a class="page-link" href="#">9</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+              </ul>
+              <div class="page-controls">
+                <a class="page-link" href="#">Next <span>&rarr;</span></a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Newsletter -->
+    <section class="newsletter-section bg-dark text-white py-5" id="newsletter">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-center text-md-start mb-4 mb-md-0">
+            <h2 class="display-6 fw-bold mb-0 text-uppercase">
+              Stay up to date about our latest offers
+            </h2>
+          </div>
+          <div class="col-12 col-md-6">
+            <form
+              class="d-flex flex-column align-items-center align-items-md-end gap-3"
+            >
+              <div class="input-group input-group-lg" style="max-width: 310px">
+                <span class="input-group-text bg-white border-0 rounded-start">
+                  <i class="bi bi-envelope text-muted"></i>
+                </span>
+                <input
+                  type="email"
+                  class="form-control border-0 rounded-end"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-light px-4 py-2 rounded-pill fw-semibold"
+              >
+                Subscribe to Newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3">
+            <h4 class="fw-bold mb-3">SHOP.CO</h4>
+            <p class="text-muted mb-4">
+              We have clothes that suits your style and which you're proud to
+              wear. From women to men.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-dark"
+                ><i class="bi bi-twitter fs-5"></i
+              ></a>
+              <a href="#" class="text-dark"
+                ><i class="bi bi-facebook fs-5"></i
+              ></a>
+              <a href="#" class="text-dark"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
+              <a href="#" class="text-dark"
+                ><i class="bi bi-github fs-5"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3">
+            <h6 class="fw-semibold mb-3">COMPANY</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">About</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Features</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Works</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Career</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3">
+            <h6 class="fw-semibold mb-3">HELP</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Customer Support</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Delivery Details</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3">
+            <h6 class="fw-semibold mb-3">FAQ</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Account</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Manage Deliveries</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Orders</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Payments</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-3">
+            <h6 class="fw-semibold mb-3">RESOURCES</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Free eBooks</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Development Tutorial</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >How to - Blog</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Youtube Playlist</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="text-muted mb-0">
+              Shop.co © 2000-2023, All Rights Reserved
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="d-flex justify-content-md-end gap-3 mt-3 mt-md-0">
+              <img
+                src="assets/imgs/vi-sa.png?height=30&width=50"
+                alt="Visa"
+                class="payment-icon"
+              />
+              <img
+                src="assets/imgs/master-card.png??height=30&width=50"
+                alt="Mastercard"
+                class="payment-icon"
+              />
+              <img
+                src="assets/imgs/pay-pal.png??height=30&width=50"
+                alt="PayPal"
+                class="payment-icon"
+              />
+              <img
+                src="assets/imgs/apple-pay.png??height=30&width=50"
+                alt="Apple Pay"
+                class="payment-icon"
+              />
+              <img
+                src="assets/imgs/google-pay.png?height=30&width=50"
+                alt="Google Pay"
+                class="payment-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const minSlider = document.getElementById("min");
+      const maxSlider = document.getElementById("max");
+      const minVal = document.getElementById("min-val");
+      const maxVal = document.getElementById("max-val");
+      const minGap = 1; // khoảng cách tối thiểu giữa min và max
+
+      function updateMin() {
+        if (parseInt(maxSlider.value) - parseInt(minSlider.value) <= minGap) {
+          minSlider.value = parseInt(maxSlider.value) - minGap;
+        }
+        minVal.textContent = minSlider.value;
+      }
+
+      function updateMax() {
+        if (parseInt(maxSlider.value) - parseInt(minSlider.value) <= minGap) {
+          maxSlider.value = parseInt(minSlider.value) + minGap;
+        }
+        maxVal.textContent = maxSlider.value;
+      }
+
+      minSlider.addEventListener("input", updateMin);
+      maxSlider.addEventListener("input", updateMax);
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
