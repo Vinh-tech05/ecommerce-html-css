@@ -104,7 +104,7 @@ button {
   margin: 0 auto;
 }
 
-.input-group {
+.input-group-newsletter {
   display: flex;
   align-items: center;
   background-color: var(--color-secondary);
@@ -117,14 +117,12 @@ button {
   -o-border-radius: 999px;
 }
 
-.input-group .icon {
+.input-group-newsletter .icon {
   padding: 10px;
-  color: #555;
-  background-color: var(--color-secondary);
   font-size: 20px;
 }
 
-.input-group input {
+.input-group-newsletter input {
   flex: 1;
   padding: 0.75rem;
   border: none;
