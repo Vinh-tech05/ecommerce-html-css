@@ -4,6 +4,9 @@
   --color-primary: #000;
   --color-secondary: #f0eeed;
 }
+body {
+  overflow-x: hidden;
+}
 h1 {
   font-family: var(--ff-secondary);
 }
